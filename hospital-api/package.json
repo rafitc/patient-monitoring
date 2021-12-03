@@ -1,0 +1,18 @@
+{
+  "name": "hospital-api",
+  "version": "1.0.0",
+  "description": "Hospital DB and search",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "author": "Rafi Rasheed T C",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "firebase-admin": "^10.0.0",
+    "geolib": "^3.3.3",
+    "mongodb": "^4.2.1",
+    "nodemon": "^2.0.15"
+  }
+}
