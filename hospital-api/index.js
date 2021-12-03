@@ -7,24 +7,23 @@ const path = require("path");
 var db = require("./connect/connection");
 const geolib = require("geolib"); //To perform geo operations
 
-app.get("/", function (req, res) {
-  console.log(path.join(__dirname + "/pages/hospital.html"));
+app.get("/hostpital", function (req, res) {
+  //send hospital update form
   res.sendFile(path.join(__dirname + "/pages/hospital.html"));
 });
 
 //Handle to recieve HTTPS POST Request from hardware device
 app.post("/patient", (req, res) => {
-  console.log(req.body);
+  //console.log(req.body);
   console.log("Hospital end point");
   console.log(req.body["patientname"]); // got the josn
   //next we need to get the funciton to find nearest hostpital from patients GPS location
   const patientLat = req.body["lat"];
   const patientLon = req.body["lon"];
   //Get all lat and lon of hospitals
+  compareDisatance(patientLat, patientLon);
 
-  //Funciton to find minimum distance
-
-  res.send("You r in hospital handle");
+  res.send("You are in /pateint");
 });
 
 db.connect((err) => {
@@ -32,8 +31,7 @@ db.connect((err) => {
     console.log(err);
   } else {
     console.log("Connected DB");
-    //insertDummyData();
-    //compareDisatance(11.2722, 77.8372);
+    insertDummyData(); //inserting dummy data to DB
   }
 });
 
