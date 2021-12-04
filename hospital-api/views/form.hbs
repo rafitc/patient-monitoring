@@ -1,0 +1,84 @@
+<form action="/newhospital" method="post" id="newhospitalform">
+  <div class="form-group">
+    <label for="hospitalname">Hospital Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="1"
+      name="hospitalname"
+      aria-describedby="hospitalnameHelp"
+      placeholder="Enter Name of hospital"
+    />
+  </div>
+  <div class="form-group">
+    <label for="address">Address</label>
+    <textarea class="form-control" name="address" id="2" rows="3"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="pincode">Pin Code</label>
+    <input
+      type="number"
+      class="form-control"
+      name="pincode"
+      placeholder="Pin Code"
+    />
+  </div>
+  <div class="form-group">
+    <label for="lat">Latitude</label>
+    <input
+      type="number"
+      class="form-control"
+      id="4"
+      step="any"
+      name="lat"
+      placeholder="Latitude"
+    />
+  </div>
+  <div class="form-group">
+    <label for="longitude">Longitude</label>
+    <input
+      type="number"
+      step="any"
+      class="form-control"
+      id="5"
+      name="lon"
+      placeholder="Longitude"
+    />
+  </div>
+  <div class="form-group">
+    <label for="totalBed">Total Bed</label>
+    <input
+      type="text"
+      class="form-control"
+      id="6"
+      name="totalBed"
+      placeholder="Total number of Bed"
+    />
+  </div>
+  <div class="form-group">
+    <label for="vacant">Vacant Bed</label>
+    <input
+      type="text"
+      class="form-control"
+      id="7"
+      name="vacant"
+      placeholder="Vacant bed"
+    />
+  </div>
+  <div class="form-group">
+    <label for="emial">Email ID</label>
+    <input
+      type="email"
+      class="form-control"
+      id="8"
+      name="email"
+      placeholder="Email"
+    />
+  </div>
+  <button
+    type="submit"
+    class="btn btn-primary"
+    form="newhospitalform"
+    value="Submit"
+  >Submit</button>
+</form>

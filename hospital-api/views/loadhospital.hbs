@@ -1,0 +1,31 @@
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{list.Name}}</h5>
+    <p class="card-text">{{list.Address}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Email ID : {{list.email}}</li>
+    <li class="list-group-item">Pin code : {{list.pincode}}</li>
+    <li class="list-group-item">Total bed : {{list.Numberofbed}}</li>
+    <li class="list-group-item">Vacant bed : {{list.vacantbed}}</li>
+
+  </ul>
+  <form action="/update/{{list._id}}" method="post" id="updateform">
+    <div class="card-body">
+      Updated vacant bed :
+      <input
+        type="text"
+        id="vacantbed"
+        name="updatedbedvalue"
+        placeholder={{list.vacantbed}}
+      />
+      <br /><br />
+      <button
+        type="submit"
+        class="btn btn-primary"
+        form="updateform"
+        value="Submit"
+      >Submit</button>
+    </div>
+  </form>
+</div>

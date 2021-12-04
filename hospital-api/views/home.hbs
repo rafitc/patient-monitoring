@@ -1,0 +1,12 @@
+<h1 align="center">Hospital Portal</h1>
+
+<div align="center">
+  <div id="dropdown" align="center">
+    {{#each posts}}
+    
+      <a href="/hospital/{{this._id}}"">
+        <h5> {{this.Name}}</h5>
+      </a>
+    {{/each}}
+  </div>
+</div>
