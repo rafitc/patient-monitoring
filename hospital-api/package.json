@@ -4,7 +4,8 @@
   "description": "Hospital DB and search",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon index.js"
+    "test": "nodemon index.js",
+    "start": "node index.js"
   },
   "author": "Rafi Rasheed T C",
   "license": "ISC",
